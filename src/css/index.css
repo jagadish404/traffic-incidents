@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.App-header {
+  padding: 20px 10px;
+  font-size: 30px;
+}
+
+#App-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.Map-area {
+  background: url(../img/berlin_map.png) no-repeat 100% 100%/cover;
+  width: 100%;
+  height: 320px;
+  position: relative;
+}
+
+.Location-marker {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  position: absolute;
+  transform-origin: 50% 100%;
+  transition: all 200ms ease-out;
+}
+
+.Location-marker:hover {
+  transform: scale(1.2);
+}
+
+.Location-marker:nth-child(1) {
+  top: 40px;
+  left: 35%;
+}
+
+.Location-marker:nth-child(2) {
+  top: 80px;
+  left: 70%;
+}
+
+.Location-marker:nth-child(3) {
+  top: 170px;
+  left: 10%;
+}
+
+.Location-marker:nth-child(4) {
+  top: 240px;
+  left: 50%;
+}
+
+.Location-marker:nth-child(5) {
+  top: 100px;
+  left: 90%;
+}
+
+.Loading-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+}
+
+.Loading-icon {
+  width: 200px;
+  height: 200px;
+}
+
+.No-incidents {
+  font-size: 1.5em;
+  color: red;
+  padding: 1em 0.5em;
+  text-align: center;
+}
+
+.Incident-list {
+  padding: 10px;
+}
+
+.Incident-row {
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.5em;
+}
+
+.Incident-row-head {
+  color: #2f2f2f;
+  border: 1px solid #413c3c;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.Incident-row-body {
+  color: #000;
+  display: none;
+  transition: all 200ms ease-out;
+}
+
+.Down-arrow {
+  width: 20px;
+  height: 20px;
+  float: right;
+}
